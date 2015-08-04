@@ -7,7 +7,7 @@ var unpredictableDancer = function(top, left, timeBetweenSteps) {
 
   this.closest;
 
-  this.$node.append('<img src="Jet.png">');
+  this.$node.append('<img src="batton.png">');
   this.$node.addClass('unpredictable rotate');
 
   this.findClosest = function() {

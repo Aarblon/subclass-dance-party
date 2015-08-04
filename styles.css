@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  background-image: url("b+wdancefloor+starcloth.jpg");
+  background-image: url("blizzard_man_stage.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 18px;
@@ -27,6 +27,11 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.megaman {
+  border: none;
+  border-radius: none;
 }
 
 .unpredictable{
