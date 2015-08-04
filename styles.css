@@ -28,3 +28,45 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.unpredictable{
+  font-family: Wingdings;
+  border: none;
+  border-radius: none;
+  color: cyan;
+  font-size: 32px;
+}
+
+.rotate{
+  position: absolute;
+  animation: rot 3s linear infinite;
+}
+
+.rave {
+  animation: grow 2s linear alternate;
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(0deg)
+               translateX(-150px)
+               rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translateX(-150px)
+               rotate(-360deg);
+  }
+}
+
+@keyframes grow {
+  0%, 100& {
+    border: 10px;
+    border-radius: 10px;
+  }
+  50% {
+    border: 100px;
+    border-radius: 100px;
+    transform: translate(-100px, -100px);
+  }
+}
