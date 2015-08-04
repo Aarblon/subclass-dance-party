@@ -5,12 +5,17 @@ var makeJumpDancer = function (top, left, timeBetweenSteps) {
 
   this.step = function() {
     jumpStep();
-    var location = (top + 25)+'px'
+    var upLocation = (top + 25)+'px';
+    var downLocation = top + 'px';
     this.$node.toggleClass('jumper');
+    if(this.$node.hasClass('lined')) {
+      upLocation = 'calc(50% + 25px)';
+      downLocation = '50%';
+    }
     if ( this.$node.hasClass('jumper') ) {
-      this.$node.animate({'top' : location}, 'fast');
+      this.$node.animate({'top' : upLocation}, 'fast');
     } else {
-      this.$node.animate({'top' : top+'px'}, 'fast');
+      this.$node.animate({'top' : downLocation}, 'fast');
     }
   }
 
