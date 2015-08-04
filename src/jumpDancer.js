@@ -8,10 +8,12 @@ var makeJumpDancer = function (top, left, timeBetweenSteps) {
     var upLocation = (top + 25)+'px';
     var downLocation = top + 'px';
     this.$node.toggleClass('jumper');
+
     if(this.$node.hasClass('lined')) {
       upLocation = 'calc(50% + 25px)';
       downLocation = '50%';
     }
+
     if ( this.$node.hasClass('jumper') ) {
       this.$node.animate({'top' : upLocation}, 'fast');
     } else {
