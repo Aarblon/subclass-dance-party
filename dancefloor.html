@@ -12,26 +12,41 @@
     <script src="src/lineUp.js"></script>
   </head>
   <body>
+
+    <div class="topbar">
+      <audio class='themeSong' autoplay loop controls src="select-robot-master.mp3"></audio>
+      <span class="title"><a href="dancefloor.html"><img src="logo-megaman.png" height="80" width="480"></a></span>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeJumpDancer">Megaman!</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="raveDancer">add a rave dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="unpredictableDancer">Bats!</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BossDancer">Boss!</a>
+      <a href="#" class="lineUpButton" data-dancer-maker-function-name="lineUp">Line up!</a>
+    </div>
+
     <div class="levelSelect">
       <div class="blizzardMan"></div>
       <div class="windMan"></div>
-      <div class"flameMan"></div>
+      <div class="flameMan"></div>
       <div class="plantMan"></div>
+      <div></div>
       <div class="tomahawkMan"></div>
       <div class="yamatoMan"></div>
       <div class="knightMan"></div>
       <div class="centaurMan"></div>
     </div>
 
-    <div class="topbar">
-      <audio autoplay loop controls></audio>
-      <span class="title"><img src="logo-megaman.png" height="120" width="480"></span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeJumpDancer">Megaman!</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="raveDancer">add a rave dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="unpredictableDancer">Bats!</a>
-      <a href="#" class="lineUpButton" data-dancer-maker-function-name="lineUp">Line up!</a>
-    </div>
     <script src="src/init.js"></script>
+    <script class='stageSelectCode'>
+      $(document).ready(function() {
+        $('.blizzardMan').on('click', function() {
+          $('.levelSelect').remove();
+          $('body').css({'background-image' : 'url("blizzard_man_stage.png")'});
+          $('.themeSong').remove();''
+          $('.topbar').prepend('<audio class="themeSong" autoplay loop controls src="blizzard-man-theme.mp3"></audio>')
+          $('.levelSelect').children().remove();
+        })
+      })
+    </script>
   </body>
 </html>

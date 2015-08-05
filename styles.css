@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  background-image: url("blizzard_man_stage.png");
+  background-image: url("megaman6_levelselect.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 18px;
@@ -12,6 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
@@ -22,6 +23,7 @@ body, a:link, a:visited, a:active{
 }
 .title{
   background-color: #777;
+  opacity: 0.6;
 }
 .dancer{
   border:10px solid red;
@@ -45,6 +47,24 @@ body, a:link, a:visited, a:active{
 .rotate{
   position: absolute;
   animation: rot 3s linear infinite;
+}
+
+.levelSelect {
+  height: 100%;
+  width: 100%;
+
+}
+
+.levelSelect div {
+  height: 14%;
+  width: 13%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: inline-block;
+  top: 10%;
+  left: 10%;
+  cursor: pointer;
 }
 
 .rave {
